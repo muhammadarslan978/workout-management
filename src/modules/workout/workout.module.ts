@@ -5,9 +5,10 @@ import { WorkoutService } from './service/workout.service';
 import { WorkoutController } from './controller/workout.controller';
 import { WorkoutRepository } from './repositories/workout.repository';
 import { ExerciseModule } from '../exercise/exercise.module';
+import { AuthModule } from '../auth/auth.module';
 
 @Module({
-  imports: [TypeOrmModule.forFeature([WorkOut]), ExerciseModule],
+  imports: [TypeOrmModule.forFeature([WorkOut]), ExerciseModule, AuthModule],
   providers: [
     WorkoutService,
     {

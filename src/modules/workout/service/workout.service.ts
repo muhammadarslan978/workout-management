@@ -35,7 +35,11 @@ export class WorkoutService {
           HttpStatus.BAD_REQUEST,
         );
       }
-      return await this.workoutRepository.create({ ...data, exercises });
+      return await this.workoutRepository.create({
+        ...data,
+        exercises,
+        trainer_id: trainerId,
+      });
     } catch (err) {
       this.handleServiceError('addWorkout', err);
     }

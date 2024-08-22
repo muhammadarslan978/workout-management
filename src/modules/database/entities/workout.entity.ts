@@ -17,7 +17,7 @@ export class WorkOut extends BaseEntity {
   title: string;
 
   @Column({ type: 'text', nullable: true })
-  description: string;
+  description?: string;
 
   @Column({ type: 'enum', enum: WorkoutLevel })
   level: WorkoutLevel;
@@ -27,6 +27,9 @@ export class WorkOut extends BaseEntity {
 
   @Column({ type: 'int' })
   duration: number;
+
+  @Column({ nullable: true })
+  trainer_id?: string;
 
   @Column({ type: 'jsonb' })
   exercises: {
@@ -43,7 +46,7 @@ export class WorkOut extends BaseEntity {
   @UpdateDateColumn({ type: 'timestamp' })
   updated_at: Date;
 
-  constructor(defaults?: IWorkOut) {
+  constructor(defaults?: Partial<IWorkOut>) {
     super();
     if (defaults) {
       Object.assign(this, defaults);
@@ -52,12 +55,13 @@ export class WorkOut extends BaseEntity {
 }
 
 export interface IWorkOut {
-  workout_id?: string;
+  id?: string;
   title: string;
   description?: string;
   level: WorkoutLevel;
   type: string;
   duration: number;
+  trainer_id?: string;
   exercises: {
     id: string;
     name: string;
