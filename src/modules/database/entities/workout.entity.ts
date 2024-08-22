@@ -30,7 +30,7 @@ export class WorkOut extends BaseEntity {
 
   @Column({ type: 'jsonb' })
   exercises: {
-    exercise_id?: string;
+    id: string;
     name: string;
     reps: number;
     sets: number;
@@ -59,7 +59,7 @@ export interface IWorkOut {
   type: string;
   duration: number;
   exercises: {
-    exercise_id?: string;
+    id: string;
     name: string;
     reps: number;
     sets: number;

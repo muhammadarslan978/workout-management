@@ -5,34 +5,9 @@ import {
   IsEnum,
   IsInt,
   IsArray,
-  ValidateNested,
   ArrayMinSize,
-  IsOptional,
 } from 'class-validator';
-import { Type } from 'class-transformer';
 import { WorkoutLevel } from '../../../constant/enum';
-
-export class ExerciseDto {
-  @IsUUID()
-  @IsOptional()
-  exercise_id?: string;
-
-  @IsString()
-  @IsNotEmpty()
-  name: string;
-
-  @IsInt()
-  @IsNotEmpty()
-  reps: number;
-
-  @IsInt()
-  @IsNotEmpty()
-  sets: number;
-
-  @IsString()
-  @IsNotEmpty()
-  instructions: string;
-}
 
 export class CreateWorkoutDto {
   @IsString()
@@ -56,8 +31,7 @@ export class CreateWorkoutDto {
   duration: number;
 
   @IsArray()
-  @ValidateNested({ each: true })
-  @Type(() => ExerciseDto)
   @ArrayMinSize(1)
-  exercises: ExerciseDto[];
+  @IsUUID('4', { each: true })
+  exerciseIds: string[];
 }

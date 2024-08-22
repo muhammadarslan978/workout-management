@@ -1,0 +1,527 @@
+[
+  {
+    "name": "Push-up",
+    "instructions": "Start in a plank position, lower your body until your chest nearly touches the floor, then push yourself back up.",
+    "video_url": "http://example.com/push-up",
+    "muscle_groups": ["Chest", "Triceps", "Shoulders"],
+    "equipment_required": false
+  },
+  {
+    "name": "Squat",
+    "instructions": "Stand with feet hip-width apart, bend your knees, and lower your body until your thighs are parallel to the floor, then rise back up.",
+    "video_url": "http://example.com/squat",
+    "muscle_groups": ["Quads", "Glutes", "Hamstrings"],
+    "equipment_required": false
+  },
+  {
+    "name": "Deadlift",
+    "instructions": "Stand with feet hip-width apart, bend at your hips and knees to lower your body and grab the bar, then lift it while keeping your back straight.",
+    "video_url": "http://example.com/deadlift",
+    "muscle_groups": ["Back", "Glutes", "Hamstrings"],
+    "equipment_required": true
+  },
+  {
+    "name": "Pull-up",
+    "instructions": "Hang from a bar with your palms facing away, then pull your body up until your chin is above the bar.",
+    "video_url": "http://example.com/pull-up",
+    "muscle_groups": ["Back", "Biceps"],
+    "equipment_required": true
+  },
+  {
+    "name": "Plank",
+    "instructions": "Hold your body in a straight line from head to heels, supported on your toes and forearms.",
+    "video_url": "http://example.com/plank",
+    "muscle_groups": ["Core"],
+    "equipment_required": false
+  },
+  {
+    "name": "Lunge",
+    "instructions": "Step forward with one leg, lower your hips until both knees are bent at about a 90-degree angle, then push back up.",
+    "video_url": "http://example.com/lunge",
+    "muscle_groups": ["Quads", "Glutes", "Hamstrings"],
+    "equipment_required": false
+  },
+  {
+    "name": "Bicep Curl",
+    "instructions": "Hold a dumbbell in each hand, curl the weights up to your shoulders, then lower them back down.",
+    "video_url": "http://example.com/bicep-curl",
+    "muscle_groups": ["Biceps"],
+    "equipment_required": true
+  },
+  {
+    "name": "Bench Press",
+    "instructions": "Lie on a bench, hold a barbell with hands slightly wider than shoulder-width, lower it to your chest, then push it back up.",
+    "video_url": "http://example.com/bench-press",
+    "muscle_groups": ["Chest", "Triceps", "Shoulders"],
+    "equipment_required": true
+  },
+  {
+    "name": "Leg Press",
+    "instructions": "Sit in the leg press machine, place your feet on the platform, and push it away from your body by extending your legs.",
+    "video_url": "http://example.com/leg-press",
+    "muscle_groups": ["Quads", "Glutes", "Hamstrings"],
+    "equipment_required": true
+  },
+  {
+    "name": "Shoulder Press",
+    "instructions": "Hold dumbbells at shoulder height, press them overhead until your arms are fully extended, then lower them back down.",
+    "video_url": "http://example.com/shoulder-press",
+    "muscle_groups": ["Shoulders", "Triceps"],
+    "equipment_required": true
+  },
+  {
+    "name": "Tricep Dip",
+    "instructions": "Sit on the edge of a bench, place your hands next to your hips, lower your body until your arms form a 90-degree angle, then push back up.",
+    "video_url": "http://example.com/tricep-dip",
+    "muscle_groups": ["Triceps"],
+    "equipment_required": false
+  },
+  {
+    "name": "Russian Twist",
+    "instructions": "Sit on the floor with knees bent, lean back slightly, rotate your torso to one side, then the other, while holding a weight.",
+    "video_url": "http://example.com/russian-twist",
+    "muscle_groups": ["Core", "Obliques"],
+    "equipment_required": true
+  },
+  {
+    "name": "Leg Raise",
+    "instructions": "Lie on your back, lift your legs straight up towards the ceiling, then slowly lower them back down.",
+    "video_url": "http://example.com/leg-raise",
+    "muscle_groups": ["Core", "Lower Abs"],
+    "equipment_required": false
+  },
+  {
+    "name": "Mountain Climber",
+    "instructions": "Start in a plank position, quickly alternate bringing one knee to your chest, then back out again, as if running in place.",
+    "video_url": "http://example.com/mountain-climber",
+    "muscle_groups": ["Core", "Cardio"],
+    "equipment_required": false
+  },
+  {
+    "name": "Burpee",
+    "instructions": "Start in a standing position, drop into a squat, kick your feet back into a plank, perform a push-up, return to squat, and jump up.",
+    "video_url": "http://example.com/burpee",
+    "muscle_groups": ["Full Body"],
+    "equipment_required": false
+  },
+  {
+    "name": "Box Jump",
+    "instructions": "Stand in front of a sturdy box, jump onto the box, landing softly, then step back down.",
+    "video_url": "http://example.com/box-jump",
+    "muscle_groups": ["Quads", "Glutes", "Calves"],
+    "equipment_required": true
+  },
+  {
+    "name": "Leg Curl",
+    "instructions": "Lie face down on the leg curl machine, place your ankles under the pad, and curl your legs up towards your buttocks.",
+    "video_url": "http://example.com/leg-curl",
+    "muscle_groups": ["Hamstrings"],
+    "equipment_required": true
+  },
+  {
+    "name": "Crunch",
+    "instructions": "Lie on your back with knees bent, place your hands behind your head, lift your shoulders off the floor, then lower them back down.",
+    "video_url": "http://example.com/crunch",
+    "muscle_groups": ["Core"],
+    "equipment_required": false
+  },
+  {
+    "name": "Chest Fly",
+    "instructions": "Lie on a bench with a dumbbell in each hand, open your arms wide, then bring the weights back together over your chest.",
+    "video_url": "http://example.com/chest-fly",
+    "muscle_groups": ["Chest"],
+    "equipment_required": true
+  },
+  {
+    "name": "Lat Pulldown",
+    "instructions": "Sit at a lat pulldown machine, grab the bar with a wide grip, pull it down to your chest, then slowly let it rise back up.",
+    "video_url": "http://example.com/lat-pulldown",
+    "muscle_groups": ["Back", "Biceps"],
+    "equipment_required": true
+  },
+  {
+    "name": "Calf Raise",
+    "instructions": "Stand with your feet hip-width apart, lift your heels off the ground to stand on your toes, then slowly lower back down.",
+    "video_url": "http://example.com/calf-raise",
+    "muscle_groups": ["Calves"],
+    "equipment_required": false
+  },
+  {
+    "name": "Glute Bridge",
+    "instructions": "Lie on your back with knees bent, lift your hips towards the ceiling, squeeze your glutes, then lower back down.",
+    "video_url": "http://example.com/glute-bridge",
+    "muscle_groups": ["Glutes", "Lower Back"],
+    "equipment_required": false
+  },
+  {
+    "name": "Cable Row",
+    "instructions": "Sit at a cable row machine, grab the handle, pull it towards your torso, keeping your back straight, then slowly release.",
+    "video_url": "http://example.com/cable-row",
+    "muscle_groups": ["Back", "Biceps"],
+    "equipment_required": true
+  },
+  {
+    "name": "Face Pull",
+    "instructions": "Attach a rope handle to a cable machine at face height, pull the handle towards your face, then slowly release.",
+    "video_url": "http://example.com/face-pull",
+    "muscle_groups": ["Shoulders", "Upper Back"],
+    "equipment_required": true
+  },
+  {
+    "name": "Farmer's Walk",
+    "instructions": "Hold a heavy weight in each hand, walk forward in a straight line, keeping your core tight and shoulders back.",
+    "video_url": "http://example.com/farmers-walk",
+    "muscle_groups": ["Full Body", "Grip Strength"],
+    "equipment_required": true
+  },
+  {
+    "name": "Battle Rope",
+    "instructions": "Hold the ends of a battle rope in each hand, make waves with the ropes by moving your arms up and down rapidly.",
+    "video_url": "http://example.com/battle-rope",
+    "muscle_groups": ["Full Body", "Cardio"],
+    "equipment_required": true
+  },
+  {
+    "name": "Kettlebell Swing",
+    "instructions": "Stand with feet hip-width apart, hold a kettlebell with both hands, hinge at your hips to swing the kettlebell between your legs, then explosively swing it up to shoulder height.",
+    "video_url": "http://example.com/kettlebell-swing",
+    "muscle_groups": ["Glutes", "Hamstrings", "Core"],
+    "equipment_required": true
+  },
+  {
+    "name": "Step-up",
+    "instructions": "Stand in front of a bench or step, place one foot on the bench, push through your heel to stand up, then step back down.",
+    "video_url": "http://example.com/step-up",
+    "muscle_groups": ["Quads", "Glutes"],
+    "equipment_required": true
+  },
+  {
+    "name": "Goblet Squat",
+    "instructions": "Hold a dumbbell or kettlebell at chest height, squat down until your thighs are parallel to the floor, then stand back up.",
+    "video_url": "http://example.com/goblet-squat",
+    "muscle_groups": ["Quads", "Glutes"],
+    "equipment_required": true
+  },
+  {
+    "name": "Dumbbell Row",
+    "instructions": "Place one knee and hand on a bench, hold a dumbbell in the other hand, row the weight up to your hip, then lower back down.",
+    "video_url": "http://example.com/dumbbell-row",
+    "muscle_groups": ["Back", "Biceps"],
+    "equipment_required": true
+  },
+  {
+    "name": "Chest Press",
+    "instructions": "Lie on a bench with a dumbbell in each hand, press the weights above your chest, then lower them back down.",
+    "video_url": "http://example.com/chest-press",
+    "muscle_groups": ["Chest", "Triceps", "Shoulders"],
+    "equipment_required": true
+  },
+  {
+    "name": "Hip Thrust",
+    "instructions": "Sit on the ground with your upper back against a bench, place a barbell over your hips, thrust your hips upwards, then lower them back down.",
+    "video_url": "http://example.com/hip-thrust",
+    "muscle_groups": ["Glutes", "Hamstrings"],
+    "equipment_required": true
+  },
+  {
+    "name": "Arnold Press",
+    "instructions": "Hold dumbbells at shoulder height with palms facing you, press them overhead while rotating your wrists so palms face forward at the top, then reverse the motion.",
+    "video_url": "http://example.com/arnold-press",
+    "muscle_groups": ["Shoulders", "Triceps"],
+    "equipment_required": true
+  },
+  {
+    "name": "Barbell Row",
+    "instructions": "Stand with feet hip-width apart, bend at your hips, hold a barbell, row the bar up to your torso, then lower it back down.",
+    "video_url": "http://example.com/barbell-row",
+    "muscle_groups": ["Back", "Biceps"],
+    "equipment_required": true
+  },
+  {
+    "name": "Skull Crusher",
+    "instructions": "Lie on a bench, hold a barbell with arms extended, lower the bar towards your forehead, then extend your arms back up.",
+    "video_url": "http://example.com/skull-crusher",
+    "muscle_groups": ["Triceps"],
+    "equipment_required": true
+  },
+  {
+    "name": "Hanging Leg Raise",
+    "instructions": "Hang from a pull-up bar, lift your legs straight up towards the bar, then lower them back down.",
+    "video_url": "http://example.com/hanging-leg-raise",
+    "muscle_groups": ["Core", "Hip Flexors"],
+    "equipment_required": true
+  },
+  {
+    "name": "Overhead Squat",
+    "instructions": "Hold a barbell overhead with arms fully extended, squat down until your thighs are parallel to the floor, then stand back up.",
+    "video_url": "http://example.com/overhead-squat",
+    "muscle_groups": ["Full Body", "Core"],
+    "equipment_required": true
+  },
+  {
+    "name": "Pistol Squat",
+    "instructions": "Stand on one leg, lower your body into a squat while keeping the other leg extended in front of you, then stand back up.",
+    "video_url": "http://example.com/pistol-squat",
+    "muscle_groups": ["Quads", "Glutes"],
+    "equipment_required": false
+  },
+  {
+    "name": "Seated Calf Raise",
+    "instructions": "Sit on a calf raise machine, place your knees under the pad, and lift your heels to raise the weight, then lower back down.",
+    "video_url": "http://example.com/seated-calf-raise",
+    "muscle_groups": ["Calves"],
+    "equipment_required": true
+  },
+  {
+    "name": "Single-leg Deadlift",
+    "instructions": "Stand on one leg, hold a dumbbell in the opposite hand, hinge at your hips to lower the weight towards the ground, then stand back up.",
+    "video_url": "http://example.com/single-leg-deadlift",
+    "muscle_groups": ["Hamstrings", "Glutes", "Core"],
+    "equipment_required": true
+  },
+  {
+    "name": "Reverse Lunge",
+    "instructions": "Step backward with one leg, lower your hips until both knees are bent at about a 90-degree angle, then push back up.",
+    "video_url": "http://example.com/reverse-lunge",
+    "muscle_groups": ["Quads", "Glutes", "Hamstrings"],
+    "equipment_required": false
+  },
+  {
+    "name": "Renegade Row",
+    "instructions": "Start in a plank position with a dumbbell in each hand, row one dumbbell towards your torso, then switch sides.",
+    "video_url": "http://example.com/renegade-row",
+    "muscle_groups": ["Back", "Core", "Biceps"],
+    "equipment_required": true
+  },
+  {
+    "name": "Side Plank",
+    "instructions": "Lie on your side, support your body on your forearm and the side of your foot, hold the position, then switch sides.",
+    "video_url": "http://example.com/side-plank",
+    "muscle_groups": ["Core", "Obliques"],
+    "equipment_required": false
+  },
+  {
+    "name": "Tire Flip",
+    "instructions": "Squat down and grip the bottom of a large tire, lift it with your legs and hips, then flip it over.",
+    "video_url": "http://example.com/tire-flip",
+    "muscle_groups": ["Full Body"],
+    "equipment_required": true
+  },
+  {
+    "name": "Dragon Flag",
+    "instructions": "Lie on a bench and hold onto it behind your head, lift your entire body up until only your upper back is on the bench, then slowly lower back down.",
+    "video_url": "http://example.com/dragon-flag",
+    "muscle_groups": ["Core"],
+    "equipment_required": false
+  },
+  {
+    "name": "Hollow Body Hold",
+    "instructions": "Lie on your back, lift your legs and shoulders off the ground, hold the position with your lower back pressed into the floor.",
+    "video_url": "http://example.com/hollow-body-hold",
+    "muscle_groups": ["Core"],
+    "equipment_required": false
+  },
+  {
+    "name": "Jump Rope",
+    "instructions": "Hold a jump rope in each hand, swing it over your head and under your feet, jumping as it passes under you.",
+    "video_url": "http://example.com/jump-rope",
+    "muscle_groups": ["Cardio", "Calves"],
+    "equipment_required": true
+  },
+  {
+    "name": "Wall Sit",
+    "instructions": "Stand with your back against a wall, slide down until your thighs are parallel to the floor, hold the position.",
+    "video_url": "http://example.com/wall-sit",
+    "muscle_groups": ["Quads", "Glutes"],
+    "equipment_required": false
+  },
+  {
+    "name": "Windmill",
+    "instructions": "Stand with feet shoulder-width apart, hold a weight overhead, bend at the hips and lower your torso to one side, then stand back up.",
+    "video_url": "http://example.com/windmill",
+    "muscle_groups": ["Core", "Shoulders"],
+    "equipment_required": true
+  },
+  {
+    "name": "Cable Crossover",
+    "instructions": "Stand between two cable machines, hold a handle in each hand, bring the handles together in front of your chest, then slowly let them back out.",
+    "video_url": "http://example.com/cable-crossover",
+    "muscle_groups": ["Chest"],
+    "equipment_required": true
+  },
+  {
+    "name": "Inverted Row",
+    "instructions": "Lie under a barbell set at waist height, grab the bar with an overhand grip, pull your chest to the bar, then lower back down.",
+    "video_url": "http://example.com/inverted-row",
+    "muscle_groups": ["Back", "Biceps"],
+    "equipment_required": true
+  },
+  {
+    "name": "Sled Push",
+    "instructions": "Stand behind a weighted sled, lean into it with your arms extended, and push it forward as fast as you can.",
+    "video_url": "http://example.com/sled-push",
+    "muscle_groups": ["Full Body", "Cardio"],
+    "equipment_required": true
+  },
+  {
+    "name": "Rope Climb",
+    "instructions": "Grip a thick rope, use your arms and legs to climb it as high as possible.",
+    "video_url": "http://example.com/rope-climb",
+    "muscle_groups": ["Full Body", "Grip Strength"],
+    "equipment_required": true
+  },
+  {
+    "name": "Turkish Get-up",
+    "instructions": "Lie on your back holding a kettlebell in one hand, stand up while keeping the kettlebell overhead, then lie back down.",
+    "video_url": "http://example.com/turkish-get-up",
+    "muscle_groups": ["Full Body", "Core"],
+    "equipment_required": true
+  },
+  {
+    "name": "Lateral Raise",
+    "instructions": "Hold a dumbbell in each hand, raise your arms out to the sides until they are parallel to the floor, then lower them back down.",
+    "video_url": "http://example.com/lateral-raise",
+    "muscle_groups": ["Shoulders"],
+    "equipment_required": true
+  },
+  {
+    "name": "Reverse Fly",
+    "instructions": "Hold a dumbbell in each hand, bend at the hips with a flat back, raise your arms out to the sides, then lower them back down.",
+    "video_url": "http://example.com/reverse-fly",
+    "muscle_groups": ["Upper Back", "Shoulders"],
+    "equipment_required": true
+  },
+  {
+    "name": "Sledgehammer Slam",
+    "instructions": "Hold a sledgehammer with both hands, swing it over your head and slam it onto a tire, then repeat.",
+    "video_url": "http://example.com/sledgehammer-slam",
+    "muscle_groups": ["Full Body", "Core"],
+    "equipment_required": true
+  },
+  {
+    "name": "Tuck Jump",
+    "instructions": "Stand with feet shoulder-width apart, jump as high as you can, bringing your knees to your chest, then land softly.",
+    "video_url": "http://example.com/tuck-jump",
+    "muscle_groups": ["Quads", "Glutes", "Cardio"],
+    "equipment_required": false
+  },
+  {
+    "name": "Medicine Ball Slam",
+    "instructions": "Hold a medicine ball overhead, slam it into the ground as hard as you can, then catch it on the rebound.",
+    "video_url": "http://example.com/medicine-ball-slam",
+    "muscle_groups": ["Full Body", "Core"],
+    "equipment_required": true
+  },
+  {
+    "name": "Pallof Press",
+    "instructions": "Stand next to a cable machine, hold the handle with both hands, press it straight out in front of you, resisting the rotation, then return to the starting position.",
+    "video_url": "http://example.com/pallof-press",
+    "muscle_groups": ["Core"],
+    "equipment_required": true
+  },
+  {
+    "name": "Overhead Tricep Extension",
+    "instructions": "Hold a dumbbell with both hands behind your head, extend your arms to lift the weight overhead, then lower it back down.",
+    "video_url": "http://example.com/overhead-tricep-extension",
+    "muscle_groups": ["Triceps"],
+    "equipment_required": true
+  },
+  {
+    "name": "Pendlay Row",
+    "instructions": "Stand with feet hip-width apart, bend at your hips with a flat back, pull a barbell from the ground up to your torso, then lower it back down.",
+    "video_url": "http://example.com/pendlay-row",
+    "muscle_groups": ["Back", "Biceps"],
+    "equipment_required": true
+  },
+  {
+    "name": "Dumbbell Pullover",
+    "instructions": "Lie on a bench, hold a dumbbell with both hands above your chest, lower it behind your head, then bring it back up.",
+    "video_url": "http://example.com/dumbbell-pullover",
+    "muscle_groups": ["Chest", "Lats"],
+    "equipment_required": true
+  },
+  {
+    "name": "Romanian Deadlift",
+    "instructions": "Hold a barbell with feet shoulder-width apart, hinge at your hips to lower the bar, keeping your back flat, then stand back up.",
+    "video_url": "http://example.com/romanian-deadlift",
+    "muscle_groups": ["Hamstrings", "Glutes"],
+    "equipment_required": true
+  },
+  {
+    "name": "Barbell Curl",
+    "instructions": "Hold a barbell with an underhand grip, curl it up to your shoulders, then lower it back down.",
+    "video_url": "http://example.com/barbell-curl",
+    "muscle_groups": ["Biceps"],
+    "equipment_required": true
+  },
+  {
+    "name": "Landmine Press",
+    "instructions": "Stand with feet shoulder-width apart, hold the end of a barbell with both hands, press it overhead, then lower it back down.",
+    "video_url": "http://example.com/landmine-press",
+    "muscle_groups": ["Shoulders", "Core"],
+    "equipment_required": true
+  },
+  {
+    "name": "Landmine Row",
+    "instructions": "Stand with feet shoulder-width apart, hold the end of a barbell with one hand, row it up to your torso, then lower it back down.",
+    "video_url": "http://example.com/landmine-row",
+    "muscle_groups": ["Back", "Biceps"],
+    "equipment_required": true
+  },
+  {
+    "name": "Zercher Squat",
+    "instructions": "Hold a barbell in the crook of your elbows, squat down until your thighs are parallel to the floor, then stand back up.",
+    "video_url": "http://example.com/zercher-squat",
+    "muscle_groups": ["Quads", "Glutes", "Core"],
+    "equipment_required": true
+  },
+  {
+    "name": "Sissy Squat",
+    "instructions": "Stand with feet shoulder-width apart, lean back and lower your body by bending your knees, then stand back up.",
+    "video_url": "http://example.com/sissy-squat",
+    "muscle_groups": ["Quads", "Core"],
+    "equipment_required": false
+  },
+  {
+    "name": "Sumo Deadlift",
+    "instructions": "Stand with feet wide apart, hold a barbell with a mixed grip, lift it by extending your hips and knees, then lower it back down.",
+    "video_url": "http://example.com/sumo-deadlift",
+    "muscle_groups": ["Hamstrings", "Glutes", "Lower Back"],
+    "equipment_required": true
+  },
+  {
+    "name": "Bulgarian Split Squat",
+    "instructions": "Stand in a lunge position with your back foot elevated on a bench, lower your body until your front thigh is parallel to the floor, then stand back up.",
+    "video_url": "http://example.com/bulgarian-split-squat",
+    "muscle_groups": ["Quads", "Glutes", "Core"],
+    "equipment_required": true
+  },
+  {
+    "name": "Weighted Step-up",
+    "instructions": "Stand in front of a bench or step, hold a dumbbell in each hand, step onto the bench, then step back down.",
+    "video_url": "http://example.com/weighted-step-up",
+    "muscle_groups": ["Quads", "Glutes"],
+    "equipment_required": true
+  },
+  {
+    "name": "Swiss Ball Crunch",
+    "instructions": "Lie back on a Swiss ball with your feet flat on the ground, perform a crunch by lifting your shoulders towards your hips.",
+    "video_url": "http://example.com/swiss-ball-crunch",
+    "muscle_groups": ["Core"],
+    "equipment_required": true
+  },
+  {
+    "name": "Hanging Knee Raise",
+    "instructions": "Hang from a pull-up bar, lift your knees towards your chest, then lower them back down.",
+    "video_url": "http://example.com/hanging-knee-raise",
+    "muscle_groups": ["Core", "Hip Flexors"],
+    "equipment_required": true
+  },
+  {
+    "name": "Barbell Shrug",
+    "instructions": "Hold a barbell with a shoulder-width grip, lift your shoulders towards your ears, then lower them back down.",
+    "video_url": "http://example.com/barbell-shrug",
+    "muscle_groups": ["Traps"],
+    "equipment_required": true
+  }
+]

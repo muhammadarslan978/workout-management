@@ -5,10 +5,10 @@ import {
   Injectable,
   Logger,
 } from '@nestjs/common';
-import { v4 as uuidv4 } from 'uuid';
-import { CreateWorkoutDto, ExerciseDto } from '../dto/create-workout.dto';
+
+import { CreateWorkoutDto } from '../dto/create-workout.dto';
 import { IWorkOutRepository } from '../interface/workout-repository.interface';
-import { Exercise } from '../interface/workout.interface';
+
 import { IWorkOut } from '../../database/entities/workout.entity';
 
 @Injectable()
@@ -19,27 +19,35 @@ export class WorkoutService {
     private readonly workoutRepository: IWorkOutRepository,
   ) {}
 
-  async addWorkout(data: CreateWorkoutDto): Promise<IWorkOut> {
+  async addWorkout(
+    trainerId: string,
+    data: CreateWorkoutDto,
+    exercises: any,
+  ): Promise<IWorkOut> {
     try {
       const existingWorkouts =
         await this.workoutRepository.findByFlexibleCriteria({
           title: data.title,
         });
       if (existingWorkouts.length > 0) {
-        throw new HttpException('Workout already exists', HttpStatus.CONFLICT);
+        throw new HttpException(
+          'Workout already exists',
+          HttpStatus.BAD_REQUEST,
+        );
       }
-      data.exercises = this.addUuidToExercises(data.exercises);
-      return await this.workoutRepository.create(data);
+      return await this.workoutRepository.create({ ...data, exercises });
     } catch (err) {
       this.handleServiceError('addWorkout', err);
     }
   }
 
-  addUuidToExercises(exercises: ExerciseDto[]): Exercise[] {
-    return exercises.map((exercise) => ({
-      ...exercise,
-      exercise_id: uuidv4(),
-    }));
+  async listWorkouts(): Promise<IWorkOut[]> {
+    try {
+      const workouts = await this.workoutRepository.findAll();
+      return workouts;
+    } catch (err) {
+      this.handleServiceError('listWorkouts', err);
+    }
   }
 
   private handleServiceError(method: string, err: any): never {
