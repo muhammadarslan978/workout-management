@@ -45,4 +45,13 @@ export class WorkoutController {
   async getWorkouts(): Promise<IWorkOut[]> {
     return this.workoutService.listWorkouts();
   }
+
+  @Post('select')
+  @UseGuards(JwtAuthGuard, RolesGuard)
+  @Roles(UserRole.USER)
+  async selectWorkoutPlans(@Body() workoutIds: string[], @Req() req: any) {
+    const userId = req.user._id;
+    await this.workoutService.associateWorkoutsWithUser(userId, workoutIds);
+    return { message: 'Workout plans selected successfully' };
+  }
 }
