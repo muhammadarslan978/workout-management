@@ -35,6 +35,14 @@ export class WorkoutService {
     return this.workoutRepository.findAll();
   }
 
+  async getWorkout(workout_id: string): Promise<IWorkOut> {
+    const workout = await this.workoutRepository.findById(workout_id);
+    if (!workout) {
+      throw new HttpException('Workout not found', HttpStatus.NOT_FOUND);
+    }
+    return workout;
+  }
+
   private async ensureUniqueWorkout(title: string): Promise<void> {
     const existingWorkouts =
       await this.workoutRepository.findByFlexibleCriteria({ title });

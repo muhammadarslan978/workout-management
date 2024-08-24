@@ -7,6 +7,7 @@ import {
   Get,
   UseGuards,
   Req,
+  Param,
 } from '@nestjs/common';
 import { WorkoutService } from '../service/workout.service';
 import { CreateWorkoutDto } from '../dto/create-workout.dto';
@@ -27,7 +28,7 @@ export class WorkoutController {
   @Post()
   @UseGuards(JwtAuthGuard, RolesGuard)
   @Roles(UserRole.TRAINER)
-  async createNewWorkout(
+  async create(
     @Body() workout: CreateWorkoutDto,
     @Req() req: any,
   ): Promise<IWorkOut> {
@@ -40,8 +41,15 @@ export class WorkoutController {
   @Get()
   @UseGuards(JwtAuthGuard, RolesGuard)
   @Roles(UserRole.TRAINER, UserRole.USER, UserRole.ADMIN, UserRole.GUEST)
-  async getWorkouts(): Promise<IWorkOut[]> {
+  async list(): Promise<IWorkOut[]> {
     return this.workoutService.listWorkouts();
+  }
+
+  @Get('/:id')
+  @UseGuards(JwtAuthGuard, RolesGuard)
+  @Roles(UserRole.TRAINER, UserRole.USER, UserRole.ADMIN, UserRole.GUEST)
+  async show(@Param('id') workout_id: string): Promise<IWorkOut> {
+    return this.workoutService.getWorkout(workout_id);
   }
 
   private validateExercises(exercises: any[], exerciseIds: string[]): void {
