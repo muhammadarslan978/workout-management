@@ -13,7 +13,7 @@ export class WorkOut extends BaseEntity {
   @PrimaryGeneratedColumn('uuid')
   id: string;
 
-  @Column({ type: 'varchar', length: 255, unique: true }) // Set title as unique
+  @Column({ type: 'varchar', length: 255, unique: true })
   title: string;
 
   @Column({ type: 'text', nullable: true })

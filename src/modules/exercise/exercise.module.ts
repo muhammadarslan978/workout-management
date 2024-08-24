@@ -4,7 +4,7 @@ import { ExerciseController } from './controller/exercise.controller';
 import { ExerciseSeederService } from './seeder/exercise-seeder.service';
 import { Exercise } from '../database/entities/exercise.entity';
 import { TypeOrmModule } from '@nestjs/typeorm';
-import { ExerciseRepository } from './repositories/exercise.repository';
+import { ExerciseRepository } from './repository/exercise.repository';
 
 @Module({
   imports: [TypeOrmModule.forFeature([Exercise])],

@@ -21,7 +21,7 @@ import { RolesGuard } from '../../auth/guards/roles.guard';
 export class WorkoutController {
   constructor(
     private readonly workoutService: WorkoutService,
-    private readonly exerciseServise: ExerciseService,
+    private readonly exerciseService: ExerciseService,
   ) {}
 
   @Post()
@@ -32,10 +32,8 @@ export class WorkoutController {
     @Req() req: any,
   ): Promise<IWorkOut> {
     const { _id } = req.user;
-    const exercises = await this.exerciseServise.findByIds(workout.exerciseIds);
-    if (exercises.length !== workout.exerciseIds.length) {
-      throw new HttpException('Exercise not found', HttpStatus.NOT_FOUND);
-    }
+    const exercises = await this.exerciseService.findByIds(workout.exerciseIds);
+    this.validateExercises(exercises, workout.exerciseIds);
     return this.workoutService.addWorkout(_id, workout, exercises);
   }
 
@@ -46,12 +44,9 @@ export class WorkoutController {
     return this.workoutService.listWorkouts();
   }
 
-  @Post('select')
-  @UseGuards(JwtAuthGuard, RolesGuard)
-  @Roles(UserRole.USER)
-  async selectWorkoutPlans(@Body() workoutIds: string[], @Req() req: any) {
-    const userId = req.user._id;
-    await this.workoutService.associateWorkoutsWithUser(userId, workoutIds);
-    return { message: 'Workout plans selected successfully' };
+  private validateExercises(exercises: any[], exerciseIds: string[]): void {
+    if (exercises.length !== exerciseIds.length) {
+      throw new HttpException('Exercise not found', HttpStatus.NOT_FOUND);
+    }
   }
 }
