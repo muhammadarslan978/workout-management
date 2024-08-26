@@ -14,14 +14,11 @@ export class Progress extends BaseEntity {
   @PrimaryGeneratedColumn('uuid')
   id: string;
 
-  @Column({ type: 'uuid' })
+  @Column({ nullable: false })
   user_id: string;
 
   @Column({ type: 'uuid' })
   workout_id: string;
-
-  @Column({ type: 'timestamp' })
-  date: Date;
 
   @Column({ type: 'jsonb' })
   progress_data: {
@@ -53,7 +50,6 @@ export interface IProgress {
   progress_id?: string;
   user_id: string;
   workout_id: string;
-  date: Date;
   progress_data: {
     weight: number;
     reps: number;

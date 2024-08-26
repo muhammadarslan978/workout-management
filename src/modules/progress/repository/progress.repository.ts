@@ -31,4 +31,28 @@ export class ProgressRepository implements IProgressRepository {
     await this.progressRepository.update(id, workout);
     return this.findById(id);
   }
+
+  async findOneByFlexibleCriteria(
+    criteria: Partial<Progress>,
+    relations: string[] = [],
+  ): Promise<Progress | null> {
+    const queryBuilder = this.progressRepository.createQueryBuilder('progress');
+
+    Object.keys(criteria).forEach((key) => {
+      const typedKey = key as keyof Progress;
+      const paramValue = criteria[typedKey as keyof Partial<Progress>];
+
+      if (paramValue !== undefined) {
+        queryBuilder.andWhere(`progress.${typedKey} = :${typedKey}`, {
+          [typedKey]: paramValue,
+        });
+      }
+    });
+
+    relations.forEach((relation) => {
+      queryBuilder.leftJoinAndSelect(`progress.${relation}`, relation);
+    });
+
+    return queryBuilder.getOne();
+  }
 }

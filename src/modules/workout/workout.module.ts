@@ -17,5 +17,6 @@ import { AuthModule } from '../auth/auth.module';
     },
   ],
   controllers: [WorkoutController],
+  exports: [WorkoutService],
 })
 export class WorkoutModule {}

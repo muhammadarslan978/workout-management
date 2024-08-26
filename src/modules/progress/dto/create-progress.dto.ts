@@ -4,7 +4,6 @@ import {
   IsOptional,
   IsString,
   IsNumber,
-  IsDate,
   ValidateNested,
   IsInt,
 } from 'class-validator';
@@ -25,16 +24,12 @@ class ProgressDataDto {
 
 export class CreateProgressDto {
   @IsUUID()
-  @IsNotEmpty()
+  @IsOptional()
   user_id: string;
 
   @IsUUID()
   @IsNotEmpty()
   workout_id: string;
-
-  @IsDate()
-  @IsNotEmpty()
-  date: Date;
 
   @ValidateNested()
   @Type(() => ProgressDataDto)

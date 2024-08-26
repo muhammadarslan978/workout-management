@@ -9,4 +9,9 @@ export interface IProgressRepository {
   findById(id: string): Promise<Progress | null>;
 
   update(id: string, progress: Partial<Progress>): Promise<Progress | null>;
+
+  findOneByFlexibleCriteria(
+    criteria: Partial<Progress>,
+    relations?: string[],
+  ): Promise<Progress | null>;
 }

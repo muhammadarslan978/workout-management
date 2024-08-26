@@ -17,9 +17,29 @@ export class ProgressService {
   }
 
   async updateProgress(
-    progress_id: string,
+    id: string,
     progress: UpdateProgressDto,
   ): Promise<IProgress | null> {
-    return this.progressRepository.update(progress_id, progress);
+    return this.progressRepository.update(id, progress);
+  }
+
+  async getProgress(options: any): Promise<IProgress | null> {
+    return this.progressRepository.findOneByFlexibleCriteria({
+      id: options.id.id,
+      user_id: options.user_id,
+    });
+  }
+
+  async getProgressByIdAndUserId(
+    id: string,
+    userId: string,
+  ): Promise<IProgress | null> {
+    return this.progressRepository.findOneByFlexibleCriteria(
+      {
+        id: id,
+        user_id: userId,
+      },
+      ['workout'],
+    );
   }
 }
